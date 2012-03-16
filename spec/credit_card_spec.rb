@@ -2,10 +2,22 @@ require 'credit_card'
 
 describe CreditCard do
 
+  context 'generic number' do
+    
+    before :each do
+      @credit_card = CreditCard.new('1 2 3 4 5 6 7 8910')
+    end
+    
+    it 'should strip spaces from the card number' do
+      @credit_card.number.should eql('12345678910')
+    end
+    
+  end
+
   context 'valid AMEX' do
         
     before :each do
-      @credit_card = CreditCard.new('378282246310005')
+      @credit_card = CreditCard.new('3782 8224 6310 005')
     end
       
     it 'should set the card type to AMEX' do
