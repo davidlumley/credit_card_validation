@@ -32,8 +32,30 @@ class CreditCard
     
   end
   
+  ###
+  # Implementation of the Luhn algorithm
+  #
+  # reverse the number and for every even digit double it
+  # if the digit is greater than 9, add the seperate parts together (i.e. 10 -> 1 + 0)
+  # if the total sum of digits is divisible by 10, the card is valid
   def valid?
-    
+    i = 0
+    sum = 0
+    @number.reverse.split('').map do |digit|
+      i += 1
+      digit = digit.to_i
+      digit *= 2 if i.even?
+      if digit > 9
+        digit = digit.to_s.split('')
+        digit = digit[0].to_i + digit[1].to_i
+      end
+      sum += digit
+    end
+    if sum % 10 == 0
+      true
+    else
+      false
+    end
   end
   
 end
