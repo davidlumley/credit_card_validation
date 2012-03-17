@@ -32,4 +32,8 @@ class CreditCard
     
   end
   
+  def valid?
+    
+  end
+  
 end

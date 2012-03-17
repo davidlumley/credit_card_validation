@@ -23,7 +23,11 @@ describe CreditCard do
       
     it 'should set the card type to AMEX' do
       @credit_card.type?.should eql('AMEX')
-    end  
+    end
+    
+    it 'should validate using the Luhn algorithm' do
+      @credit_card.valid?.should eql(true)
+    end
     
   end
   
@@ -37,6 +41,10 @@ describe CreditCard do
     
     it 'should set the card type to AMEX' do
       @credit_card.type?.should eql('AMEX')
+    end
+    
+    it 'should not validate using the Luhn algorithm' do
+      @credit_card.valid?.should eql(false)
     end
     
   end
@@ -53,6 +61,10 @@ describe CreditCard do
       @credit_card.type?.should eql('Discover')
     end
     
+    it 'should validate using the Luhn algorithm' do
+      @credit_card.valid?.should eql(true)
+    end
+    
   end
   
   
@@ -65,6 +77,10 @@ describe CreditCard do
     
     it 'should set the card type to Discover' do
       @credit_card.type?.should eql('Discover')
+    end
+    
+    it 'should not validate using the Luhn algorithm' do
+      @credit_card.valid?.should eql(false)
     end
     
   end
@@ -81,6 +97,10 @@ describe CreditCard do
       @credit_card.type?.should eql('MasterCard')
     end
     
+    it 'should validate using the Luhn algorithm' do
+      @credit_card.valid?.should eql(true)
+    end
+    
   end
   
   
@@ -93,6 +113,10 @@ describe CreditCard do
     
     it 'should set the card type to MasterCard' do
       @credit_card.type?.should eql('MasterCard')
+    end
+    
+    it 'should not validate using the Luhn algorithm' do
+      @credit_card.valid?.should eql(false)
     end
     
   end
@@ -109,6 +133,10 @@ describe CreditCard do
       @credit_card.type?.should eql('Visa')
     end
     
+    it 'should validate using the Luhn algorithm' do
+      @credit_card.valid?.should eql(true)
+    end
+    
   end
   
   
@@ -123,6 +151,10 @@ describe CreditCard do
       @credit_card.type?.should eql('Visa')
     end
     
+    it 'should not validate using the Luhn algorithm' do
+      @credit_card.valid?.should eql(false)
+    end
+    
   end
   
   
@@ -135,6 +167,10 @@ describe CreditCard do
     
     it 'should set the card type to Unknown' do
       @credit_card.type?.should eql('Unknown')
+    end
+    
+    it 'should not validate using the Luhn algorithm' do
+      @credit_card.valid?.should eql(false)
     end
     
   end
