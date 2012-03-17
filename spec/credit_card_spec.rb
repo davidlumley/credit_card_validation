@@ -6,6 +6,7 @@ describe CreditCard do
     
     before :each do
       @credit_card = CreditCard.new('1 2 3 4 5 6 7 8910')
+      puts @credit_card.number
     end
     
     it 'should strip spaces from the card number' do
