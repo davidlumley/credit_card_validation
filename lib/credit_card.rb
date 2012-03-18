@@ -36,4 +36,7 @@ class CreditCard
     sum % 10 == 0 ? true : false
   end
   
+  def validation_status
+  end
+  
 end
