@@ -1,4 +1,4 @@
-require 'credit_card'
+require 'lib/credit_card'
 
 describe CreditCard do
 
