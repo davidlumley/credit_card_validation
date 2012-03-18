@@ -6,7 +6,7 @@ class CreditCard
     'AMEX'        => /^3[47]\d{13}$/,
     'Discover'    => /^6011\d{12}$/,
     'MasterCard'  => /^5[1-5]\d{14}$/,
-    'Visa'        => /^4\d{12}(\d{3})?$/
+    'VISA'        => /^4\d{12}(\d{3})?$/
   }
   
   def initialize(number)

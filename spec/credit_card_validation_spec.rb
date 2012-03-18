@@ -11,19 +11,19 @@ describe 'credit_card_validation' do
     end
     
     it 'should validate a single valid amex card' do
-      validate(@amex).should eql('AMEX: 378282246310005 (valid)')
+      validate(@amex).gsub(/\n/, '').should eql('AMEX: 378282246310005        (valid)')
     end
     
     it 'should validate a single valid discover card' do
-      validate(@discover).should eql('Discover: 6011111111111117 (valid)')
+      validate(@discover).gsub(/\n/, '').should eql('Discover: 6011111111111117   (valid)')
     end
     
     it 'should validate a single valid mastercard' do
-      validate(@master_card).should eql('MasterCard: 5105105105105100 (valid)')
+      validate(@master_card).gsub(/\n/, '').should eql('MasterCard: 5105105105105100 (valid)')
     end
     
     it 'should validate a single valid visa card' do
-      validate(@visa).should eql('Visa: 4111111111111111 (valid)')
+      validate(@visa).gsub(/\n/, '').should eql('VISA: 4111111111111111       (valid)')
     end
     
   end
@@ -38,23 +38,23 @@ describe 'credit_card_validation' do
     end
     
     it 'shouldn\'t validate a single invalid amex card' do
-      validate(@amex).should eql('AMEX: 378282246310006 (invalid)')
+      validate(@amex).gsub(/\n/, '').should eql('AMEX: 378282246310006        (invalid)')
     end
     
     it 'shouldn\'t validate a single invalid discover card' do
-      validate(@discover).should eql('Discover: 6011111111111118 (invalid)')
+      validate(@discover).gsub(/\n/, '').should eql('Discover: 6011111111111118   (invalid)')
     end
     
     it 'shouldn\'t validate a single invalid mastercard' do
-      validate(@master_card).should eql('MasterCard: 5105105105105106 (invalid)')
+      validate(@master_card).gsub(/\n/, '').should eql('MasterCard: 5105105105105106 (invalid)')
     end
     
     it 'shouldn\'t validate a single invalid visa card' do
-      validate(@visa).should eql('Visa: 4111111111111 (invalid)')
+      validate(@visa).gsub(/\n/, '').should eql('VISA: 4111111111111          (invalid)')
     end
     
     it 'shouldn\'t validate a single invalid unknown card' do
-      validate(@unknown).should eql('Unknown: 9111111111111111 (invalid)')
+      validate(@unknown).gsub(/\n/, '').should eql('Unknown: 9111111111111111    (invalid)')
     end
     
   end

@@ -128,8 +128,8 @@ describe CreditCard do
       @credit_card = CreditCard.new('4111111111111111')
     end
     
-    it 'should set the card type to Visa' do
-      @credit_card.type?.should eql('Visa')
+    it 'should set the card type to VISA' do
+      @credit_card.type?.should eql('VISA')
     end
     
     it 'should validate using the Luhn algorithm' do
@@ -146,8 +146,8 @@ describe CreditCard do
       @credit_card = CreditCard.new('4111111111111')
     end
     
-    it 'should set the card type to Visa' do
-      @credit_card.type?.should eql('Visa')
+    it 'should set the card type to VISA' do
+      @credit_card.type?.should eql('VISA')
     end
     
     it 'should not validate using the Luhn algorithm' do
