@@ -37,6 +37,7 @@ class CreditCard
   end
   
   def validation_status
+    sprintf "%-28s (#{valid? ? 'valid' : 'invalid'})\n", "#{type?}: #{@number}"
   end
   
 end
