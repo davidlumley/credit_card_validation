@@ -23,3 +23,20 @@ The following should be output
 	MasterCard: 5105105105105100 (valid)
 	MasterCard: 5105105105105106 (invalid)
 	Unknown: 9111111111111111    (invalid)
+
+## CreditCard Class
+The CreditCard class contains the various methods to obtain the requested output.
+
+### type?
+The type of the card, which will be one of the following:
+* AMEX
+* Discover
+* MasterCard
+* VISA
+* Unknown
+
+### valid?
+Boolean indicating whether or not the card is valid based on the Luhn algorithm.
+
+### number
+The card number, without any extraneous spaces
