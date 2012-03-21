@@ -1,0 +1,59 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', Roboto, Arial, sans-serif;
+  font-size: 14px;
+  color: #0f0f0f;
+  line-height: 1.5em;
+}
+header,
+section {
+  display: block;
+  width: 400px;
+  margin: 0 auto;
+}
+header h1 {
+  margin: 0;
+  padding: 0;
+  line-height: 100px;
+}
+form {
+  margin: 0;
+  padding: 0;
+}
+form textarea {
+  margin: 0;
+  padding: 10px;
+  border: none;
+  width: 380px;
+  min-height: 160px;
+  font-family: 'Helvetica Neue', Roboto, Arial, sans-serif;
+  font-size: 14px;
+  background: #f0f0f0;
+  color: #0f0f0f;
+  line-height: 1.5em;
+}
+form input {
+  margin: 10px 0 0 0;
+  padding: 10px;
+  border: none;
+  font-family: 'Helvetica Neue', Roboto, Arial, sans-serif;
+  font-size: 14px;
+  background: #f0f0f0;
+  color: #0f0f0f;
+  text-align: center;
+}
+form input:hover {
+  background: #0f0f0f;
+  color: #f0f0f0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+ul li {
+  margin: 10px 0;
+  padding: 0;
+}

@@ -1,0 +1,97 @@
+.border-box()
+{
+	-webkit-box-sizing:	border-box;
+	-moz-box-sizing:	border-box;
+	box-sizing:			border-box;
+}
+
+.deboss-border()
+{
+	border-top:		solid 1px @shade_15;
+	border-bottom:	solid 1px @shade_12;
+}
+
+.emboss-border(
+	@top:			@shade_12,
+	@bottom:		@shade_15
+)
+{
+	border-top:		solid 1px @top;
+	border-bottom:	solid 1px @bottom;
+}
+
+.text-shadow(
+	@shadow:		@shade_2
+){
+	text-shadow:	@shadow 0 1px 0;
+}
+
+.deboss-text-shadow(
+	@highlight:		@shade_12,
+	@shadow:		@shade_2
+){
+	text-shadow:	@shadow 0 -1px 0, @highlight 0 1px 0;
+}
+
+.box-shadow(
+	@left:	0,
+	@top:	1px,
+	@blur:	15px,
+	@color:	rgba(0,0,0,0.8)
+) {
+	-moz-box-shadow:	@arguments;
+	-webkit-box-shadow:	@arguments;
+	box-shadow:			@arguments;
+}
+
+.inset-box-shadow(
+	@left:		0,
+	@top:		1px,
+	@blur:		5px,
+	@spread:	2px,
+	@color:	rgba(0,0,0,0.8)
+) {
+	-moz-box-shadow:	inset @arguments;
+	-webkit-box-shadow:	inset @arguments;
+	box-shadow:			inset @arguments;
+}
+
+.button-box-shadow(
+	@left:	0,
+	@top:	1px,
+	@blur:	0px,
+	@color:	rgba(255,255,255,0.5),
+	
+	@inset-left:	0,
+	@inset-top:		1px,
+	@inset-blur:	0,
+	@inset-color:	rgba(255,255,255,0.5)
+){
+	-moz-box-shadow:	@left @top @blur @color, inset @inset-left @inset-top @inset-blur @inset-color;
+	-webkit-box-shadow:	@left @top @blur @color, inset @inset-left @inset-top @inset-blur @inset-color;
+	box-shadow:			@left @top @blur @color, inset @inset-left @inset-top @inset-blur @inset-color;
+}
+
+.border-radius(
+	@radius:					5px
+) {
+	-webkit-background-clip:	padding-box;
+	-moz-background-clip:		padding-box;
+	background-clip:			padding-box;
+	-webkit-border-radius:		@arguments;
+	-moz-border-radius:			@arguments;
+	border-radius:				@arguments;
+}
+
+.linear-gradient(
+	@gradient_1_color:	rgba(255,255,255,0.15),
+	@gradient_2_color:	rgba(0,0,0,0.15),
+	@gradient_1_stop:	0%,
+	@gradient_2_stop:	100%
+) {
+	background-image:	-o-linear-gradient(		top, @gradient_1_color @gradient_1_stop, @gradient_2_color @gradient_2_stop);
+	background-image:	-moz-linear-gradient(	top, @gradient_1_color @gradient_1_stop, @gradient_2_color @gradient_2_stop);
+	background-image:	-webkit-linear-gradient(top, @gradient_1_color @gradient_1_stop, @gradient_2_color @gradient_2_stop);
+	background-image:	-ms-linear-gradient(	top, @gradient_1_color @gradient_1_stop, @gradient_2_color @gradient_2_stop);
+	background-image:	linear-gradient(		top, @gradient_1_color @gradient_1_stop, @gradient_2_color @gradient_2_stop);
+}
